@@ -1,0 +1,14 @@
+We need cookies (unique ids) for each user
+for this we'll use npm uuid
+Go to Inspect>Application>Cookies to see the cookies when you're logged in
+
+We implemeted basic authentication and used stateful session management.
+The stateful session management has resulted in cookie disappearance upon restarting the server 
+
+The stateless session management will solve this problem as the id assigned to user can be viewed but
+can never be changed
+
+(think of the example of the valet boy assigning a ticket to your car)
+To implement this, we'll be using Json Web Tokens (JWTs)
+
+Now we have a unique token for each user which will expire after a significantly longer date than the session timeout
